@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- // se  Se agregan librerias para la ventana modal de notificacion al enviar formulario y diseno responsive -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <!-- <script type="text/javascript"src="js/myScript.js" ></script> -->
+  <script type="text/javascript"src="js/filescript.js" ></script>
+</head>
+<body  class="p-3 mb-2 bg-light text-dark">
+<nav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link " href="index.html">Actividad1</a>
+  <a class="nav-item nav-link " href="actividad2.html">Actividad2</a>
+  <a class="nav-item nav-link   active " href="actividad3.html">Actividad3</a>
+  <a class="nav-item nav-link" href="proyectofinal.html">proyectofinal</a>
+</nav><br><br> 
+
+<!-- // se inicia formulario -->  
+
+<form  action="test.php" method="get" class="container md-form" id="formAct2" >
+<fieldset class="rounded border border-dark  p-3 align-middle">
+<legend><h2>Lector de Datos de texto</h2></legend>
+<div>
+<i class="fa fa-download"><a  href="https://drive.google.com/uc?id=1VuZreL6R8umpcrKUR2g38vm2QN367Zeo&export=download">Descargue el archivo <strong>Clientes.txt </strong>desde aqui</a></i>
+</div><br>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+  </div>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input"  id="fileInput"
+      aria-describedby="inputGroupFileAddon01">
+    <label class="custom-file-label" for="inputGroupFile01">Selecciones su archivo de texto</label>
+  </div>
+</div><br>
+<div>
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="CargarClientes()" data-toggle="modal" data-target="#basicExampleModal">
+    Cargar Tabla
+</button>
+  </div>
+  <div style="overflow-x:auto;"><br><br>
+  <render>
+  </render>
+  </div>
+  
+
+</form>
+  <!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Carga de datos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="resp" class="modal-body">
+        Sus datos fueron cargados correctamente.
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <button type="button"  class="btn btn-success"data-dismiss="modal"  >Ok</button>
+		
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="http://intechnovacion.com/"> Carlos Ponte</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</html>

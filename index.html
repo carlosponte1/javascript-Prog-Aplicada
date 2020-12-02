@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html>
+<!-- // se  Se agregan librerias para la ventana modal de notificacion al enviar formulario y diseno responsive -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="mystyle.css">
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+  <!-- //Funcion realizada para boton reset -->
+<script>
+function rst() {
+  document.getElementById("myForm").reset();
+}
+</script>
+</head>
+<body class="p-3 mb-2 bg-light text-dark">
+<nav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link active" href="index.html">Actividad1</a>
+  <a class="nav-item nav-link" href="actividad2.html">Actividad2</a>
+  <a class="nav-item nav-link" href="actividad3.html">Actividad3</a>
+  <a class="nav-item nav-link" href="proyectofinal.html">proyectofinal</a>
+</nav>
+
+<!-- // se inicia formulario -->
+
+<form action="test.php" method="get" class="container"id=myForm >
+<fieldset class="rounded border border-dark  p-3 align-middle"> 
+<legend><h2>Formulario de registro</h2></legend>
+  <div class="form-group  >
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" class="form-control" id="frm" placeholder="Juan">
+  </div>
+    <div class="form-group">
+    <label for="frm">Apellido</label>
+    <input type="email" name="apellido" class="form-control rounded" id="frm" placeholder="Perez">
+  </div>
+    <div class="form-group">
+    <label for="frm">Fecha de nacimineto</label>
+    <input type="date"name="fecha" class="form-control" id="frm">
+  </div>
+  <div class="form-group">
+    <label for="frm">edad</label>
+    <input type="number" name="edad" class="form-control rounded" id="frm" placeholder="00">
+  </div>
+  <div class="form-group"> 
+    <label for="frm">Email address</label>
+    <input type="email" name="email" class="form-control rounded" id="frm" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="frm">Nombre de Usuario</label>
+    <input type="text" class="form-control rounded" id="frm" placeholder="userxxx">
+  </div>
+  <div class="form-group">
+    <label for="pass">Contrasena</label>
+    <input type="password" class="form-control rounded" placeholder="Password" id="password" required>
+  </div>
+  <div class="form-group">
+    <label for="cpass">Confirme su contrasena</label>
+    <input type="password" class="form-control rounded" placeholder="Confirm Password" id="confirm_password" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Seleccione su pregunta secreta</label>
+    <select  class="form-control" id="exampleFormControlSelect2">
+      <option>1-Cual fue el nombre de su primera mascota?</option>
+      <option>2-Cual es  el nombre de soltera de su madre?</option>
+      <option>3-Como se llama su mejor amigo de la infancia?</option>
+      <option>4-Cual es su color favorito?</option>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="frm">Escriba su respuesta</label>
+    <input type="text" class="form-control" id="frm" placeholder="">
+  </div>
+  <div>
+ 
+  </div>
+  <!-- <button type="button" class="btn btn-primary btn-lg btn-block" onclick="alerta1()">Enviar</button> -->
+   <!-- Button trigger modal -->
+<button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#basicExampleModal">
+  Enviar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registro Completo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        El formulario ha sido enviado correctamente
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-success"data-dismiss="modal" onclick="rst()">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </fieldset>
+  
+</form>
+ 
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+</head>
+<body>
+
+<form id="frm" action="test.php">
+    Enter name:<input type="text" name="username" id="username" onblur="validate()"/>
+    Enter e-Mail:<input type="text" name="email" id="email" onblur=""/>
+</form>
+
+<script>
+
+
+function validate(){
+    var form = document.getElementById('frm');
+    if (form.username.value.indexOf("A") === 0) {
+        alert("estoy");
+    } else {
+        alert('error');
+      
+}
+</script>
+</body> 
+</html>

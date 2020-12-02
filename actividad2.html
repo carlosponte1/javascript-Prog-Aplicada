@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- // se  Se agregan librerias para la ventana modal de notificacion al enviar formulario y diseno responsive -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"src="js/myScript.js" ></script>
+</head>
+<body onload="selecData()" class="p-3 mb-2 bg-light text-dark">
+<nav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link " href="index.html">Actividad1</a>
+  <a class="nav-item nav-link active " href="actividad2.html">Actividad2</a>
+  <a class="nav-item nav-link "href="actividad3.html">Actividad3</a>
+  <a class="nav-item nav-link" href="proyectofinal.html">proyectofinal</a>
+</nav><br><br> 
+
+<!-- // se inicia formulario --> 
+
+<form  action="test.php" method="get" class="container"id="formAct2" >
+<fieldset class="rounded border border-dark  p-3 align-middle">
+<legend><h2>Tipos de Datos Javascript</h2></legend>
+
+<div class="md-form input-group">
+<span class="input-group-text">Escriba su  tipo de dato </span>
+  <input type="text"   id="tpof1" placeholder="String" class="form-control">
+  
+  <div class="input-group-append" id="MaterialButton-addon4">
+    <button class="btn btn-md btn-primary m-0 px-3" onclick="selecData()" id="b1" type="button" data-toggle="modal"data-target="#basicExampleModal" >Tipo de dato</button>
+   
+  </div>
+</div><br>
+<div class="md-form input-group">
+<span class="input-group-text">Escriba su  tipo de dato </span>
+  <input type="text"  id="tpof2" placeholder="Number" class="form-control">
+  
+  <div class="input-group-append" id="MaterialButton-addon4">
+    <button  class="btn btn-md btn-primary m-0 px-3" onclick="selecData()" id="b2" type="button" data-toggle="modal"data-target="#basicExampleModal" >Tipo de dato</button>
+   
+  </div>
+</div><br>
+<div class="md-form input-group">
+<span class="input-group-text">Escriba su  tipo de dato </span>
+  <input type="text" id="tpof3" placeholder="Null" class="form-control">
+  
+  <div class="input-group-append" id="MaterialButton-addon4">
+    <button class="btn btn-md btn-primary m-0 px-3" onclick="getInputValue()" id="b3" type="button" data-toggle="modal"data-target="#basicExampleModal" >Tipo de dato</button>
+   
+  </div>
+</div><br>
+<div class="md-form input-group">
+<span class="input-group-text">Escriba su  tipo de dato </span>
+  <input type="text" id="tpof4"  placeholder="boolean" class="form-control">
+  
+  <div class="input-group-append" id="MaterialButton-addon4">
+    <button class="btn btn-md btn-primary m-0 px-3" onclick="getInputValue()" id="b4" type="button" data-toggle="modal"data-target="#basicExampleModal" >Tipo de dato</button>
+   
+  </div><br>
+  
+ 
+</div><br>
+
+
+<div class="md-form input-group">
+<span class="input-group-text">Escriba su  tipo de dato </span>
+  <input type="text" id="tpof5"  placeholder="Udenfined" disabled class="form-control">
+  
+  <div class="input-group-append" id="MaterialButton-addon4">
+    <button class="btn btn-md btn-primary m-0 px-3" onclick="getInputValue()" id="b5" type="button" data-toggle="modal"data-target="#basicExampleModal" >Tipo de dato</button>
+   
+  </div><br>
+  
+  
+ 
+</div><br>
+
+<div class="md-form input-group">
+<span class="input-group-text">Escriba su  tipo de dato </span>
+  <input type="text" id="tpof6"  placeholder="Object Arrray agregue 2 string separados por espacios"  class="form-control">
+  
+  <div class="input-group-append" id="MaterialButton-addon4">
+    <button class="btn btn-md btn-primary m-0 px-3"  id="b6" type="button" data-toggle="modal"data-target="#basicExampleModal" >Tipo de dato</button>
+   
+  </div><br> 
+  </div><br>
+<div class="md-form input-group">
+<span class="input-group-text">Escriba su  tipo de dato </span>
+  <input type="text" id="tpof7"  placeholder="Function" class="form-control">
+  
+  <div class="input-group-append" id="MaterialButton-addon4">
+    <button class="btn btn-md btn-primary m-0 px-3"  id="b7" type="button" data-toggle="modal"data-target="#basicExampleModal" >Tipo de dato</button>
+   
+  </div><br>
+  
+ 
+</div><br><br>
+<div>
+    <button type="button"  onclick="rst()" class="btn btn-warning">Reset</button>
+   
+  </div>
+</form>
+  <!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tipo de Dato</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="resp" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <button type="button"  class="btn btn-success"data-dismiss="modal" >Ok</button>
+		<button type="button"  onclick="rst()" class="btn btn-warning"data-dismiss="modal">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="http://intechnovacion.com/"> Carlos Ponte</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</html>

@@ -1,0 +1,56 @@
+th
+{   color:#FFFFFF;
+	background-color: #8ADBFE;
+}
+td
+{
+	color:#BDEBFE;
+	background-color: #CBCBCB;
+}
+
+
+.text-small {
+  font-size: 0.75rem;
+}
+
+
+
+/* .carousel-item
+{
+	  width:640px;
+      height:768px;
+} */ 
+
+-webkit-scrollbar {
+    display: none;
+}
+
+html,body
+{
+	overflow-x: hidden;
+}
+
+.map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+
+hr{
+  border: 5px solid #007bff;
+  border-radius: 5px;
+}
+#navbar a {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
