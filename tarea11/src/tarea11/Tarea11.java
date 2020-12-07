@@ -7,7 +7,7 @@ package tarea11;
 import java.util.Scanner;
 /*Scanner sc = new Scanner(System.in);*
  *
- * @author Carlos
+ * @author Carlos Ponte
  */
 
 public class Tarea11 {
@@ -21,7 +21,7 @@ public class Tarea11 {
          
         Scanner sc = new Scanner(System.in);
         int number1,number2;
-      // TODO code application logic here
+     
         funcion1();
         System.out.print("Punto 2"+ "\n");
         System.out.print("Ingresa el primer número  "+ "\n");
